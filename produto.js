@@ -1,5 +1,5 @@
 // 6. Módulo ES6 - Exportando a classe
-export class produto {
+export class Produto {
     // 3. Objetos e Classes - Criação da classe com propriedades
     constructor(nome, preco, categoria) {
         this.nome = nome;

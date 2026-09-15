@@ -1,3 +1,5 @@
+import {Produto} from './produto.js'
+
 // 1. variáveis - var, let e const
 const nomeLoja = 'Áudio & Chi-Fi Store';
 let desconto = 0.15;
@@ -5,17 +7,17 @@ var categoriaPrincipal = 'Fones In-Ear';
 
 // 2. funções e arrow Functions
 
-//funcáo tradidicional
+//funcão tradidicional
 
 function calcularValorfinal (preco, desconto) {
     return preco - (preco * desconto);
 }
 
-//Agora com arrow function
+//Agora com Arrow function
 
-const calcularValorfinal = (preco, desconto) => preco - (preco * desconto);
+const calcularValorfinalarrow = (preco, desconto) => preco - (preco * desconto);
 
-// 3. objetos e classes - Objeto literal 
+// 3. Objetos e classes - Objeto literal 
 
 const acessorioliteral = {
     nome: 'TRN Black Pearl DAC',
@@ -46,16 +48,21 @@ console.log('Fones mais acessíveis:', fonesAcessiveis);
 // reduce - calculando o preço total do catálogo
 
 const valorTotalCatalogo = catalogo.reduce((acumulador, produto) => acumulador + produto.preco, 0);
-console.log(`Valor Total do Catálogo: R$ ${valorTotalCatalogo.tofixed(2)}`);
+console.log(`Valor Total do Catálogo: R$ ${valorTotalCatalogo.toFixed(2)}`);
 
 // 5. Destructuring e Tempatle Literals
 const {nome, preco} = produto1;
-console.log (`Destaque: ${nome} (5 DDs por lado, total de 10) custa R$ ${preco.tofixed(2)}`);
+console.log (`Destaque: ${nome} (5 DDs por lado, total de 10) custa R$ ${preco.toFixed(2)}`);
 
-// 7. Operadores - operedor Ternário
+// 7. Operadores - Operador Ternário
 
 const statusPromocao = produto3.preco < 100 ? 'Sim, está em promoção!': 'preço normal.';
+console.log(`O ${produto3.nome} está em promoção? ${statusPromocao}`);
 
 // Operadores - Spread Operator
 // Clonando o array e adicionando um novo produto
  
+const novoItem = new Produto( 'KZ Vader (3DD)',210, 'Fones In-Ear');
+const catalogoAtualizado = [...catalogo, novoItem];
+
+console.log('Catálogo Atualizado (com Spread operator):', catalogoAtualizado);

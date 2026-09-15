@@ -1,0 +1,21 @@
+{
+  "name": "catalogo-produtos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giulianotech/atividade-catalogo-produtos.git"
+  },
+  "keywords": [],
+  "author": "Giuliano Mota Pereira",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/giulianotech/atividade-catalogo-produtos/issues"
+  },
+  "homepage": "https://github.com/giulianotech/atividade-catalogo-produtos#readme"
+}
